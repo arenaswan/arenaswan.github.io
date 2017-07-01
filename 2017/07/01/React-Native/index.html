@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello Github | 技术小栈</title>
+  <title>React Native中的深坑 | 技术小栈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从Github开始起步 记得大学毕业那年有朋友向我推荐github，当时没太注意，到后来大大小小的项目都需要从github上clone时，才慢慢意识到github对一个程序猿的重要性。从最开始的nodejs(Express)、Echarts、artTemplate、d3，到后来的mybatis(pagehelper)、react等，从github上clone了许多，也学到了很多，到最近遇到一些问题">
-<meta name="keywords" content="学习,计划,总结,随笔">
+  <meta name="description" content="错误: 找不到符号BuildConfig.DEBUG 因偶然的机会发现阿里系的ant.design做的还不错，插件比较丰富，基本能满足目前项目的需求，于是想采用guide推荐的dva来作为主体框架，于是clone了一份入门的example用来做参考，经过各种挫折后总算是把example给跑起来了,为了省事，直接copy了一份，打算直接在这上面构建，结果把copy过来的直接运行，第一个错就是错误:">
+<meta name="keywords" content="React Native">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Github">
-<meta property="og:url" content="http://yoursite.com/2017/05/19/Hello-Github/index.html">
+<meta property="og:title" content="React Native中的深坑">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/React-Native/index.html">
 <meta property="og:site_name" content="技术小栈">
-<meta property="og:description" content="从Github开始起步 记得大学毕业那年有朋友向我推荐github，当时没太注意，到后来大大小小的项目都需要从github上clone时，才慢慢意识到github对一个程序猿的重要性。从最开始的nodejs(Express)、Echarts、artTemplate、d3，到后来的mybatis(pagehelper)、react等，从github上clone了许多，也学到了很多，到最近遇到一些问题">
-<meta property="og:updated_time" content="2017-05-19T16:07:41.754Z">
+<meta property="og:description" content="错误: 找不到符号BuildConfig.DEBUG 因偶然的机会发现阿里系的ant.design做的还不错，插件比较丰富，基本能满足目前项目的需求，于是想采用guide推荐的dva来作为主体框架，于是clone了一份入门的example用来做参考，经过各种挫折后总算是把example给跑起来了,为了省事，直接copy了一份，打算直接在这上面构建，结果把copy过来的直接运行，第一个错就是错误:">
+<meta property="og:updated_time" content="2017-07-01T16:47:39.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Github">
-<meta name="twitter:description" content="从Github开始起步 记得大学毕业那年有朋友向我推荐github，当时没太注意，到后来大大小小的项目都需要从github上clone时，才慢慢意识到github对一个程序猿的重要性。从最开始的nodejs(Express)、Echarts、artTemplate、d3，到后来的mybatis(pagehelper)、react等，从github上clone了许多，也学到了很多，到最近遇到一些问题">
+<meta name="twitter:title" content="React Native中的深坑">
+<meta name="twitter:description" content="错误: 找不到符号BuildConfig.DEBUG 因偶然的机会发现阿里系的ant.design做的还不错，插件比较丰富，基本能满足目前项目的需求，于是想采用guide推荐的dva来作为主体框架，于是clone了一份入门的example用来做参考，经过各种挫折后总算是把example给跑起来了,为了省事，直接copy了一份，打算直接在这上面构建，结果把copy过来的直接运行，第一个错就是错误:">
   
     <link rel="alternative" href="/atom.xml" title="技术小栈" type="application/atom+xml">
   
@@ -158,56 +158,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hello-Github" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-React-Native" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello Github
+      React Native中的深坑
     </h1>
   
 
         
-        <a href="/2017/05/19/Hello-Github/" class="archive-article-date">
-  	<time datetime="2017-05-19T14:53:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-19</time>
+        <a href="/2017/07/01/React-Native/" class="archive-article-date">
+  	<time datetime="2017-07-01T14:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="从Github开始起步"><a href="#从Github开始起步" class="headerlink" title="从Github开始起步"></a>从Github开始起步</h2><blockquote>
-<p>记得大学毕业那年有朋友向我推荐github，当时没太注意，到后来大大小小的项目都需要从github上clone时，才慢慢意识到github对一个程序猿的重要性。<br>从最开始的nodejs(Express)、Echarts、artTemplate、d3，到后来的mybatis(pagehelper)、react等，从github上clone了许多，也学到了很多，到最近遇到一些问题时，也不再只是单纯的百度一下，更多的是从github上寻找答案，这些答案往往能帮我迅速解决问题，也能从issues里面学到更多，避免从一个坑出来跳到另一个坑。</p>
-<h2 id="从Markdown开始总结"><a href="#从Markdown开始总结" class="headerlink" title="从Markdown开始总结"></a>从Markdown开始总结</h2><p>之前也有想过通过写博客的方式来总结日常项目中的问题以及与网友分享一些知识点，然后一时兴起，在博客园上注册了账号，弄好了模板，然后打算写第一篇技术文章的时候，突然不知道该从何写起，当时放弃的想法是觉得自己知识点不够全面以及技术深度不够，很难完整的诠释一个技术要点，要是写出来，难免让人贻笑大方。</p>
-<p>前段时间在github上与某个开源项目的作者的一次QA突然让我大受启发，如果我的问题不提出来，作者也没法发现自己的问题，我也没法解决当前的技术问题。所以交流比分享更为重要，要想获得交流的通道，首先得分享自己的观点与知识，不然与闭门造车无二。</p>
-<p>于是，最近花了点时间研究了一下hexo以及markdown，决定从Markdown开始总结，转变一下原有的学习方式，希望能以此建立更为全面的技术体系。</p>
-</blockquote>
-<h2 id="技术现状"><a href="#技术现状" class="headerlink" title="技术现状"></a>技术现状</h2><ul>
-<li>前端：css+div、js(jquery/easyui/extjs)、react(刚起步，包括native)</li>
-<li>服务端：Java(SSH/SSM)、.net(还停留在大学阶段)、nodejs(停留在某个不成熟的小项目上)</li>
-<li>数据库：SQL Server、MySQL、Informix(不说精通吧，至少SQL熟练)、mongoDB(仅仅接触过)</li>
-</ul>
-<h2 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h2><ul>
-<li>学习理解Tomcat机制，达到能手写自建类似服务程序</li>
-<li>学习理解Spring MVC框架，争取能手写Spring MVC框架</li>
-<li>MQ/Mycat/redis/dubbo/Nginx…</li>
-<li>学习react/react-native</li>
-<li>设计模式思想</li>
-<li>大数据spark..</li>
-</ul>
-<h2 id="博客计划"><a href="#博客计划" class="headerlink" title="博客计划"></a>博客计划</h2><ul>
-<li>手写Tomcat实现系列</li>
-<li>手写Spring MVC实现系列</li>
-<li>分布式学习系列</li>
-<li>react系列</li>
-<li>设计模式系列</li>
-<li>大数据系列</li>
-</ul>
-<hr>
-<blockquote>
-<p>OK，就写这么多，旨在通过记录总结，不断学习，形成自有的知识体系。技术道路上任重而道远，愿与君共勉，我的心愿是世界和平！</p>
+        <h2 id="错误-找不到符号BuildConfig-DEBUG"><a href="#错误-找不到符号BuildConfig-DEBUG" class="headerlink" title="错误: 找不到符号BuildConfig.DEBUG"></a>错误: 找不到符号BuildConfig.DEBUG</h2><blockquote>
+<p>因偶然的机会发现阿里系的ant.design做的还不错，插件比较丰富，基本能满足目前项目的需求，于是想采用guide推荐的dva来作为主体框架，于是clone了一份入门的<a href="https://github.com/nihgwu/react-native-dva-starter" target="_blank" rel="external">example</a>用来做参考，经过各种挫折后总算是把example给跑起来了,为了省事，直接copy了一份，打算直接在这上面构建，结果把copy过来的直接运行，第一个错就是错误: 找不到符号BuildConfig.DEBUG。<br>本来再重新clone一份后，可以完美解决问题，抱着有错误就想办法解决的心态硬着头皮解决，解决步骤如下：</p>
+<ol>
+<li>打开android\app项下的build.gradle，将defaultConfig项下的applicationId改为’com.xxxxx’,xxx与app/src/java/com/中的包名保持一致；</li>
+<li>运行继续报错：Could not delete path ‘D:\XXX….XXXX\android\app\build\generated\source\buildConfig\debug\com’.<br>原因为原项目编译后的文件无法覆盖导致，删除继续(PS：继续挖坑)</li>
+<li>删除文件后，继续报类似的错误，删除android\app\项下的build文件夹，使项目重新编译，然后再次运行，继续报错误1：错误: 找不到符号return BuildConfig.DEBUG;</li>
+<li>再次删除build文件夹，查找配置文件，发现文件/android/app/src/main/res/values/strings.xml中的app_name值与文件/artland-crm/android/app/src/main/AndroidManifest.xml中的package值仍然为原值，于是改为当前项目对应的值后再次运行</li>
+<li>再次运行，app成功载入到了模拟器中，node闪退，app报错，但是报的错比较常见了：unable to load script from assets’index.android.bundle’.于是，在项目根路径下运行下面命令：react-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –assets-dest android/app/src/main/res/</li>
+<li>再次运行，完美载入，至此，项目完美构建。鼓爪。。。。-。-</li>
+</ol>
 </blockquote>
 
       
@@ -253,19 +233,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计划</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">React Native</a>
         		</li>
       		
 		</ul>
@@ -332,7 +300,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/19/Hello-Github/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/01/React-Native/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -346,18 +314,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/01/React-Native/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          React Native中的深坑
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/05/19/Hello-Github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello Github</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -370,7 +329,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Hello-Github" data-title="Hello Github" data-url="http://yoursite.com/2017/05/19/Hello-Github/"></div>
+	<div class="ds-thread" data-thread-key="React-Native" data-title="React Native中的深坑" data-url="http://yoursite.com/2017/07/01/React-Native/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -393,8 +352,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2017/05/19/Hello-Github/", 
-    sourceId: "Hello-Github",
+    url: "http://yoursite.com/2017/07/01/React-Native/", 
+    sourceId: "React-Native",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };

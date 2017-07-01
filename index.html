@@ -158,6 +158,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-React-Native" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/01/React-Native/">React Native中的深坑</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/01/React-Native/" class="archive-article-date">
+  	<time datetime="2017-07-01T14:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="错误-找不到符号BuildConfig-DEBUG"><a href="#错误-找不到符号BuildConfig-DEBUG" class="headerlink" title="错误: 找不到符号BuildConfig.DEBUG"></a>错误: 找不到符号BuildConfig.DEBUG</h2><blockquote>
+<p>因偶然的机会发现阿里系的ant.design做的还不错，插件比较丰富，基本能满足目前项目的需求，于是想采用guide推荐的dva来作为主体框架，于是clone了一份入门的<a href="https://github.com/nihgwu/react-native-dva-starter" target="_blank" rel="external">example</a>用来做参考，经过各种挫折后总算是把example给跑起来了,为了省事，直接copy了一份，打算直接在这上面构建，结果把copy过来的直接运行，第一个错就是错误: 找不到符号BuildConfig.DEBUG。<br>本来再重新clone一份后，可以完美解决问题，抱着有错误就想办法解决的心态硬着头皮解决，解决步骤如下：</p>
+<ol>
+<li>打开android\app项下的build.gradle，将defaultConfig项下的applicationId改为’com.xxxxx’,xxx与app/src/java/com/中的包名保持一致；</li>
+<li>运行继续报错：Could not delete path ‘D:\XXX….XXXX\android\app\build\generated\source\buildConfig\debug\com’.<br>原因为原项目编译后的文件无法覆盖导致，删除继续(PS：继续挖坑)</li>
+<li>删除文件后，继续报类似的错误，删除android\app\项下的build文件夹，使项目重新编译，然后再次运行，继续报错误1：错误: 找不到符号return BuildConfig.DEBUG;</li>
+<li>再次删除build文件夹，查找配置文件，发现文件/android/app/src/main/res/values/strings.xml中的app_name值与文件/artland-crm/android/app/src/main/AndroidManifest.xml中的package值仍然为原值，于是改为当前项目对应的值后再次运行</li>
+<li>再次运行，app成功载入到了模拟器中，node闪退，app报错，但是报的错比较常见了：unable to load script from assets’index.android.bundle’.于是，在项目根路径下运行下面命令：react-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –assets-dest android/app/src/main/res/</li>
+<li>再次运行，完美载入，至此，项目完美构建。鼓爪。。。。-。-</li>
+</ol>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">React Native</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/01/React-Native/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Hello-Github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -431,6 +511,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">React-Native</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
             
             <div class="clearfix"></div>
